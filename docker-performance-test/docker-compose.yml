@@ -1,0 +1,29 @@
+services:
+  container_1:
+    image: ubuntu:latest
+    cpuset: "0,1"
+    container_name: container_1
+    command: ["tail", "-f", "/dev/null"]
+    deploy:
+      resources:
+        limits:
+          memory: "2g"
+    network_mode: "host"
+    privileged: true
+    cap_add:
+      - SYS_NICE
+
+  container_2:
+    image: ubuntu:latest
+    cpuset: "2,3"
+    container_name: container_2
+    command: ["tail", "-f", "/dev/null"]
+    deploy:
+      resources:
+        limits:
+          memory: "2g"
+    network_mode: "host"
+    privileged: true
+    cap_add:
+      - SYS_NICE
+
