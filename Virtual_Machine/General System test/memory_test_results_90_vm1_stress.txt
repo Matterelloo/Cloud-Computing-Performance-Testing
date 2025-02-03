@@ -1,0 +1,13 @@
+
+stress-ng --vm 2 --vm-bytes 1G --timeout 90s --metrics-brief
+
+stress-ng: info:  [3139] setting to a 1 min, 30 secs run per stressor
+stress-ng: info:  [3139] dispatching hogs: 2 vm
+stress-ng: metrc: [3139] stressor       bogo ops real time  usr time  sys time   bogo ops/s     bogo ops/s
+stress-ng: metrc: [3139]                           (secs)    (secs)    (secs)   (real time) (usr+sys time)
+stress-ng: metrc: [3139] vm             13410318     90.06    158.36     21.14    148907.82       74707.72
+stress-ng: info:  [3139] skipped: 0
+stress-ng: info:  [3139] passed: 2: vm (2)
+stress-ng: info:  [3139] failed: 0
+stress-ng: info:  [3139] metrics untrustworthy: 0
+stress-ng: info:  [3139] successful run completed in 1 min, 30.08 secs
